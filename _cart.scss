@@ -1,0 +1,285 @@
+@keyframes scale-up {
+	0% {
+		transform: scale(1);
+	}
+
+	100% {
+		transform: scale(1.1);
+	}
+}
+
+ @-webkit-keyframes heartbeat {
+    from {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-transform-origin: center center;
+              transform-origin: center center;
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    10% {
+      -webkit-transform: scale(0.91);
+              transform: scale(0.91);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    17% {
+      -webkit-transform: scale(0.98);
+              transform: scale(0.98);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    33% {
+      -webkit-transform: scale(0.87);
+              transform: scale(0.87);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    45% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+  }
+  @keyframes heartbeat {
+    from {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-transform-origin: center center;
+              transform-origin: center center;
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    10% {
+      -webkit-transform: scale(0.91);
+              transform: scale(0.91);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    17% {
+      -webkit-transform: scale(0.98);
+              transform: scale(0.98);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+    33% {
+      -webkit-transform: scale(0.87);
+              transform: scale(0.87);
+      -webkit-animation-timing-function: ease-in;
+              animation-timing-function: ease-in;
+    }
+    45% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-animation-timing-function: ease-out;
+              animation-timing-function: ease-out;
+    }
+  }
+  
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;   
+}
+@mixin hover-dark {
+    color: #FFFFFF;
+    background: #000000;
+}
+@mixin hover-noline {
+        color: rgb(136, 136, 136);
+        text-decoration: none;
+}
+.cart-top{
+    height: 400px;
+    background: url(./img/cart_img/cart_bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.cart-top__title{
+    @extend .catalog-top__title
+}
+.cart{
+    display: grid;
+        grid-template-columns: repeat(12,1fr);
+        gap: 32px;
+        margin-top: 64px;
+    &__form{    
+        height: 556px;
+        background: #F7F6F6;
+        border-radius: 20px;
+        grid-column: span 4;
+        &-button{
+            font-family: 'Montserrat';
+            font-weight: 400;
+font-size: 16px;
+line-height: 20px;
+        }
+    }
+    &__content{
+        grid-column: span 8;
+    }
+
+    &__name-box{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 14px;
+        padding-right: 30px;
+    }
+
+    &__item{
+        padding-top: 25px;
+        padding-bottom: 32px;
+        border-top: 0.5px solid #CACDD8;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    &-img {
+        width: 173px;
+        height: 173px;
+    }
+
+    &__info{
+        width: 276px;
+        @include flex-column();
+        gap: 15px;
+    }
+    &__buttons-box{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding-top: 22px;
+    }
+    &__button{
+        font-family: 'Montserrat';
+        width: 200px;
+        height: 37px;
+        border: 1px solid #000000;
+border-radius: 50px;    
+background-color: transparent;
+cursor: pointer;
+font-weight: 400;
+font-size: 14px;
+line-height: 17px;
+display: flex;
+align-items: center;
+text-align: center;
+justify-content: center;
+color: #020202;
+transition:background, color .4s;
+
+&:hover{
+    @include hover-dark();
+}
+    }
+    &__left{
+        display: flex;
+        gap: 32px;
+    }
+    &__link-box{
+        display: flex;
+        gap: 32px;           
+        a{font-weight: 400;
+            font-size: 14px;
+            line-height: 210%;
+            text-decoration-line: underline;
+            color: #000000;
+            &:hover{
+                @include hover-noline();
+            }
+        }
+   }
+  
+   &__number{
+    width: 71px;
+    height: 51px;
+    background: #F7F6F6;
+    border-radius: 6px;
+    border: none;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 210%;
+color: #000000;
+outline: none;
+   }
+   &__form{
+    @include flex-column();
+    gap: 18px;
+    align-items: center;
+    padding: 42px 28px 148px;
+    p{
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    color: #000000;
+    margin-top: 23px;
+    }     
+    span{
+    font-weight: 500;
+    } 
+    &-input{
+        background-color: transparent;
+        border: none;
+        border-bottom: 1px solid #CACDD8;
+        font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    width: 100%;
+    margin-bottom: 25px;
+    outline: none;
+    &::placeholder { color: #000000;}
+       }
+       &-title{
+        font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 36px;
+    color: #000000;
+    margin-bottom: 18px;
+       }
+       &-button{
+        font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    color: #000000;
+    border-radius: 20px;
+    background-color: transparent;
+    width: 290px;
+    height: 41px;
+    cursor: pointer;
+    transition: all .4s;
+    animation: heartbeat 1.5s ease-in-out 5s 2 both;
+    &:hover{
+       @include hover-dark();
+    }
+       }
+    }
+}
+.cart-text{
+    font-weight: 400;
+font-size: 14px;
+line-height: 17px;
+color: #888888;
+}
+.cart-price{
+    font-weight: 500;
+font-size: 16px;
+line-height: 20px;
+display: flex;
+align-items: center;
+text-align: center;
+color: #050505;
+}
+

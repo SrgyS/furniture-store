@@ -1,0 +1,15 @@
+@media (min-width: 1025px) and (max-width: 1235px) {
+    .product{
+        &-card{
+        width: 330px;
+        }
+        &-content{
+            //justify-content: space-between;
+            column-gap: 5px;
+        }
+    }
+    .center {
+        padding-left: calc(50% - 500px);
+        padding-right: calc(50% - 500px);
+    }
+}
